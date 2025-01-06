@@ -22,7 +22,7 @@ def main():
     while True:
         screen.fill("black")
         spaceship.draw(screen)
-        
+        spaceship.update(dt)
         
         #end of iteration
         dt = frames.tick(60)/1000
