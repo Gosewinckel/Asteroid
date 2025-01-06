@@ -40,6 +40,11 @@ def main():
             if item.collision(spaceship):
                 print("Game over!")
                 pygame.quit()
+
+            for s in shots:
+                if item.collision(s):
+                    s.kill()
+                    item.split()
         
         #end of iteration
         dt = frames.tick(60)/1000
